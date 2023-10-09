@@ -1,0 +1,17 @@
+## Gremlin Identifier; uniquely identifies this machine with Gremlin
+## (can also set with GREMLIN_IDENTIFIER environment variable)
+#identifier: 
+
+## Gremlin Team ID; you can find this value at https://app.gremlin.com/settings/teams
+## (can also be set with GREMLIN_TEAM_ID environment variable)
+team_id: 7e7a6794-17d4-531e-b647-34b49344cc21
+
+## Gremlin Client Tags; Tag your machine with key-value pairs that help you target this machine during attacks
+## (can also set with GREMLIN_CLIENT_TAGS environment variable)
+tags:
+  service: license-usage
+  interface: http
+
+## Gremlin Team Secret, should not be set when using `team_certificate`+`team_private_key`
+## (can also set with GREMLIN_TEAM_SECRET environment variable)
+team_secret: f86bac37-f233-4711-abac-37f233e7117f

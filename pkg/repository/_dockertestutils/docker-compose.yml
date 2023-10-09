@@ -1,0 +1,25 @@
+  version: '3'
+  services:
+
+    signindatatrackerws:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      depends_on:
+        - dynamodb-local
+      environment:
+        AWS_REGION: local
+
+    dynamodb-local:
+      image: amazon/dynamodb-local:latest
+      hostname: dynamodblocal
+      container_name: dynamodb-local
+      #Supporting Persistent Storage when docker down
+      command: "-jar DynamoDBLocal.jar -sharedDb"
+
+      volumes:
+        - dynamodata:/home/dynamodblocal/data
+      ports:
+        - "8000:8000"
+  volumes:
+    dynamodata:
